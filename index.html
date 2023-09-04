@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <header>
+      <h1>To-Do List</h1>
+    </header>
+    <main>
+      <div class="left">
+        <h2>Left Side</h2>
+        <textarea name="input" class="tasks" id="tasks" cols="60" rows="10"></textarea>
+        <br />
+        <button class="btn">Submit</button>
+      </div>
+      <div class="right">
+        <h2>Right Side</h2>
+        <ul class="list">
+          <li class="listElement" id="list0">
+            <p id="p0">Sample Item 0</p>
+            <span> <button class="edit" id="edit0">Edit</button><button class="del" id="del0">Del</button> </span>
+          </li>
+
+          <li class="listElement" id="list1">
+            <p id="p1">Sample Item 1</p>
+            <span> <button class="edit" id="edit1">Edit</button><button class="del" id="del1">Del</button> </span>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

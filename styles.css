@@ -1,0 +1,60 @@
+html {
+  font-size: 20px;
+  background-color: black;
+  color: azure;
+}
+h1 {
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+h2 {
+  padding: 1em 0em;
+  font-size: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+div {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 4em 5em;
+}
+
+.del {
+  margin-left: 0.3em;
+}
+
+textarea {
+  display: flex;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  padding: 1em;
+  border: 0.1em solid #003049;
+  background-color: rgb(147, 107, 169);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
