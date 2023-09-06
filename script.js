@@ -20,29 +20,29 @@ tasks.addEventListener("keypress", function (e) {
 });
 
 const addEntry = function () {
-  const list = document.createElement("li");
-  const span = document.createElement("span");
-  const p = document.createElement("p");
-  const delButton = document.createElement("button");
-  const editButton = document.createElement("button");
+  const createList = document.createElement("li");
+  const createSpan = document.createElement("span");
+  const createParagraph = document.createElement("p");
+  const createDelButton = document.createElement("button");
+  const createEditButton = document.createElement("button");
   if (document.querySelector(".tasks").value === "") {
     alert("Textfield cannot be empty");
     return;
   } else {
-    p.id = `p${counter}`;
-    p.textContent = document.querySelector(".tasks").value;
-    list.appendChild(p);
-    list.classList = "listElement";
-    list.id = `list${counter}`;
-    delButton.classList.add("del");
-    delButton.id = `del${counter}`;
-    editButton.classList.add("edit");
-    editButton.id = `edit${counter}`;
-    delButton.innerText = "Del";
-    editButton.innerText = "Edit";
-    document.querySelector(`.list`).appendChild(list).appendChild(span);
-    span.appendChild(editButton);
-    span.appendChild(delButton);
+    createParagraph.id = `p${counter}`;
+    createParagraph.textContent = document.querySelector(".tasks").value;
+    createList.appendChild(createParagraph);
+    createList.classList = "listElement";
+    createList.id = `list${counter}`;
+    createDelButton.classList.add("del");
+    createDelButton.id = `del${counter}`;
+    createEditButton.classList.add("edit");
+    createEditButton.id = `edit${counter}`;
+    createDelButton.innerText = "Del";
+    createEditButton.innerText = "Edit";
+    document.querySelector(`.list`).appendChild(createList).appendChild(createSpan);
+    createSpan.appendChild(createEditButton);
+    createSpan.appendChild(createDelButton);
     counter++;
     document.querySelector(".tasks").value = "";
   }
@@ -50,7 +50,8 @@ const addEntry = function () {
 
 // With Event Delegation
 document.querySelector(".list").addEventListener("click", function (cur) {
-  let number = cur.target.id.slice(-1);
+  let number = cur.target.id.replace(/[delit]/g, "");
+  console.log(number);
   if (cur.target.id === `del${number}`) {
     document.getElementById(`list${number}`).remove();
   } else if (cur.target.id === `edit${number}`) {
